@@ -11,6 +11,10 @@ bot = commands.Bot(command_prefix="$", intents=INTENTS)
 
 @bot.event
 async def on_ready():
+    await bot.change_presence(
+        status=discord.Status.online,
+        activity=discord.Game("Bens Test")
+    )
     print(f"Bot conectado como {bot.user}")
 
 @bot.command()
